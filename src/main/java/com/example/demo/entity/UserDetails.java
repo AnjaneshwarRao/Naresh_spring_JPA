@@ -20,6 +20,7 @@ import lombok.Setter;
 public class UserDetails {
 	@Id
 	private String emailId;
+
 	@Column(name = "password")
 	private String password;
 	@Column(name = "name")
@@ -34,6 +35,24 @@ public class UserDetails {
 	private String state;
 	@Column(name = "country")
 	private String country;
+	
+	public UserDetails() {
+		
+	}
+	public UserDetails(String emailId, String password, String name, String gender, long contact, String city,
+			String state, String country) {
+		super();
+		this.emailId = emailId;
+		this.password = password;
+		this.name = name;
+		this.gender = gender;
+		this.contact = contact;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+	}
+
+	
 
 	public String getEmailId() {
 		return emailId;
